@@ -1,10 +1,18 @@
-// onCreateに相当
 window.onload = function() {
-	// findViewByIdに相当
-	var btn1 = document.getElementById('btn1');
+	battery.addEventListener("chargingchange", updateBatteryStatus);
+	battery.addEventListener("levelchange", updateBatteryStatus);
+	updateBatteryStatus();
 }
 
-// setOnClickListnerに相当
-var onButtonClick = function() {
-    document.getElementById('div1').innerHTML = 'Hello World';
+var battery = navigator.battery ;
+
+function updateBatteryStatus() {
+	var status = "Battery status: " + battery.level * 100 + " %";
+  	document.getElementById('div1').innerHTML = status;    
+
+    if (battery.charging) {
+    	document.getElementById('div2').innerHTML = "Battery is charging";    
+    } else {
+    	document.getElementById('div2').innerHTML = "Battery is not charging";        	
+    }
 }
