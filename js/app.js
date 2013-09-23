@@ -1,19 +1,15 @@
-// onCreateに相当
-window.onload = function() {
+var onButtonClick1 = function() {
+ 	window.navigator.vibrate(200);
+}
 
-	onButtonClick1 = function() {
-	 	window.navigator.vibrate(200);
-	}
+var onButtonClick2 = function() {
+ 	window.navigator.vibrate([400,50,100,50,100]);		
+}
 
-	onButtonClick2 = function() {
-	 	window.navigator.vibrate([400,50,100,50,100]);		
-	}
+var onButtonClick3 = function() {
+ 	window.navigator.vibrate(5000);		
+}
 
-	onButtonClick3 = function() {
-	 	window.navigator.vibrate(5000);		
-	}
-
-	onButtonClick4 = function() {
-	 	window.navigator.vibrate(0);		
-	}
+var onButtonClick4 = function() {
+ 	window.navigator.vibrate(0);		
 }
