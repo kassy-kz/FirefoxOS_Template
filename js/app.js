@@ -1,9 +1,9 @@
-// onCreateに相当
-window.onload = function() {
-	// findViewByIdに相当
-	var btn1 = document.getElementById('btn1');
-	// setOnClickListnerに相当
-	btn1.onclick = function() {
-	    document.getElementById('div1').innerHTML = 'Hello World';
-	}
+var onAddButtonClick = function() {
+    document.getElementById('mainText').innerHTML += '<br> add item';
+}
+
+var onRemoveButtonClick = function() {
+    var str = document.getElementById('mainText').innerHTML;
+    var i = str.lastIndexOf("<br>");
+    document.getElementById('mainText').innerHTML = str.substring(0,i);
 }
