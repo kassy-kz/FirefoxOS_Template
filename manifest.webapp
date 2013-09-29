@@ -14,5 +14,14 @@
   },
   "installs_allowed_from": ["*"],
 
+  "permissions": {
+    "alarms": { "description": "アラームを利用するために必要" },
+    "desktop-notification": { "description": "通知を利用するために必要" }
+  },
+
+  "messages": [
+    { "alarm": "/index.html" }
+  ],
+  
   "default_locale": "en"
 }
