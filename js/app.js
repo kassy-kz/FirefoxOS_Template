@@ -3,7 +3,8 @@ var alarmId;
 
 // ボタンが押された時、Alarmをセットする
 var onButtonClick1 = function() {
-    // Alarm発火までの時間
+
+    // Alarm発火までの時間（ミリ病）
 	var time = 5000;
 	// Alarmセット
 	var request = navigator.mozAlarms.add(
@@ -13,8 +14,12 @@ var onButtonClick1 = function() {
 	);
 
 	// Alarmセットに成功した時
-	request.onsuccess = function () {
-	    alarmId = this.result;
+	request.onsuccess = function (e) {
+		alert("Alarm Set Success");
+	    alarmId = e.target.result;
+	}
+	request.onerror = function() {
+		alert("Alarm Error");
 	}
 }
 
@@ -25,10 +30,7 @@ var onButtonClick2 = function() {
 	}
 }
 
-// Alarmのハンドリング
-navigator.mozSetMessageHandler("alarm", alarmHandler);
-
-// Alarmが発火したときに呼ばれる関数
-var alarmHandler = function(mozAlarm) {
-    alert("alarm fired: " + JSON.stringify(mozAlarm.data)); 	
-}
+navigator.mozSetMessageHandler("alarm", function (mozAlarm) { 
+	// Alarm発動時はここがよばれる
+  alert("alarm fired: " + JSON.stringify(mozAlarm.data)); 
+});
