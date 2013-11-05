@@ -30,6 +30,7 @@ var onButtonClick2 = function() {
 	}
 }
 
+// Alarmのハンドリング
 navigator.mozSetMessageHandler("alarm", function (mozAlarm) { 
 	// Alarm発動時はここがよばれる
   alert("alarm fired: " + JSON.stringify(mozAlarm.data)); 
