@@ -8,10 +8,12 @@
     "48": "/img/icons/icon_48.png",
     "128": "/img/icons/icon_128.png"
   },
+
   "developer": {
     "name": "you",
     "url": "http://example.com"
   },
+
   "installs_allowed_from": ["*"],
 
   "default_locale": "en"
