@@ -1,0 +1,13 @@
+.btnBlue {
+    background: linear-gradient(to bottom,  #0088cc 0%,#0055cc 100%); /* W3C */
+
+    text-align: center;
+    font-size: 100%;
+    margin: 1em auto;
+    display: block;
+    padding: .5em;
+    color: white;
+    width: 10em;
+    max-width: 80%;
+    line-height: 1.2em;
+}
