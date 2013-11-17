@@ -1,5 +1,20 @@
 FirefoxOS_Template
 ==================
+
+## これなに
+
+Firefox OS アプリ開発に使えるテンプレートプロジェクトです。
+主要APIの基本的なコードの書き方をまとめているつもりです。
+ブランチで機能を分けていますので必要な物をご参照ください。
+
+* master 素のテンプレート
+* alarm  アラームを用いるアプリ
+* battery バッテリーAPIを用いるサンプル
+* orientation orientation APIを用いるサンプル
+* vibration Vibration APIを用いるサンプルコード
+* WebActivities WebActivitiesを用いるサンプルコード
+
+
 ## ソースコードライセンス
 
 * ソースコードは自由に利用してもらって構いません。
