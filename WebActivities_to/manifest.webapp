@@ -1,0 +1,31 @@
+{
+  "version": "0.1",
+  "name": "連携先App",
+  "description": "Web Activities(連携先)",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/img/icons/icon_16.png",
+    "48": "/img/icons/icon_48.png",
+    "128": "/img/icons/icon_128.png"
+  },
+
+  "developer": {
+    "name": "you",
+    "url": "http://example.com"
+  },
+
+  "installs_allowed_from": ["*"],
+
+  "default_locale": "en",
+
+  "activities": {
+    "pick": {
+      "href": "./index.html",
+      "disposition": "inline",
+      "filters": {
+        "type": ["image/*","image/jpeg","image/png"]
+      },
+      "returnValue": true
+    }
+  }
+}
